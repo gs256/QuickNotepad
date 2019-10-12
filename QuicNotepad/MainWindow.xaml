@@ -1,0 +1,102 @@
+﻿<Window x:Class="QuicNotepad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuicNotepad"
+        mc:Ignorable="d"
+        Title="QuickPaper" 
+        WindowStartupLocation="CenterScreen"
+        Height="556"
+        Width="976"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        AllowsTransparency="True"
+        MinHeight="200"
+        MinWidth="500"
+        Background="Transparent">
+
+    <!--CaptionHeight="{Binding TitleHeight}"-->
+    
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            ResizeBorderThickness="{Binding ResizeBorderThickness}"
+            CaptionHeight="0"
+            GlassFrameThickness="0"
+            CornerRadius="0"/>
+    </WindowChrome.WindowChrome>
+
+    <Window.DataContext>
+        <local:WindowViewModel/>
+    </Window.DataContext>
+
+    <Border Padding="16">
+        <Border.Effect>
+            <DropShadowEffect 
+                ShadowDepth="0"
+                Opacity="0.3"
+                BlurRadius="16"/>
+        </Border.Effect>
+        
+        <Grid Background="{StaticResource BgGrayBrush}" ClipToBounds="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Left part -->
+            <local:SideMenuControl 
+                Width="240" 
+                local:AnimateSlideInFromLeftProperty.Value="{Binding SideMenuVisible}">
+                
+                <local:NoteListControl/>
+                
+            </local:SideMenuControl>
+
+
+
+            <!-- Right part -->
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Navigation panel -->
+                <Grid Grid.Row="0">
+
+                    <!-- Toggle side panel button -->
+                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                        <Button Style="{StaticResource NavigationButton}" Content="&lt;" Command="{Binding ToggleSidebarCommand}"/>
+                        <StackPanel Background="{StaticResource BgGrayBrush}" Width="510" MouseDown="StackPanel_MouseDown"/>
+                    </StackPanel>
+
+                    <!-- Windows buttons -->
+                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                        <Button Style="{StaticResource NavigationButton}" Content="-"/>
+                        <Button Style="{StaticResource NavigationButton}" Content="?"/>
+                        <Button Style="{StaticResource NavigationButton}" Content="X"/>
+                    </StackPanel>
+                </Grid>
+
+                <!-- Main textbox -->
+                <TextBox 
+                    Grid.Row="1"
+                    Background="{StaticResource BgGrayBrush}"
+                    Margin="6"
+                    TextWrapping="Wrap"
+                    FontFamily="{StaticResource Segoe UI}"
+                    FontSize="{StaticResource FontSizeNormal}"
+                    Foreground="{StaticResource FontLightGrayBrush}"
+                    Text="Dsafsfdsadfafsd asefsdfasdf"
+                    BorderThickness="0"
+                    AcceptsReturn="True" 
+                    AcceptsTab="True"/>
+
+            </Grid>
+
+        </Grid>
+    </Border>
+
+    
+</Window>

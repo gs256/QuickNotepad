@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:QuicNotepad">
+
+    <Color x:Key="BgGray">#272a32</Color>
+    <SolidColorBrush x:Key="BgGrayBrush" Color="{StaticResource BgGray}" />
+
+    <Color x:Key="BgDarkGray">#1f222a</Color>
+    <SolidColorBrush x:Key="BgDarkGrayBrush" Color="{StaticResource BgDarkGray}" />
+
+    <Color x:Key="BgLightGray">#303541</Color>
+    <SolidColorBrush x:Key="BgLightGrayBrush" Color="{StaticResource BgLightGray}" />
+    
+    <Color x:Key="FontLightGray">#d3d3d3</Color>
+    <SolidColorBrush x:Key="FontLightGrayBrush" Color="{StaticResource FontLightGray}" />
+
+    <Color x:Key="WhiteOnHover">#22ffffff</Color>
+    <SolidColorBrush x:Key="WhiteOnHoverBrush" Color="{StaticResource WhiteOnHover}"/>
+
+</ResourceDictionary>
