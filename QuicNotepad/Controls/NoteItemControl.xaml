@@ -14,15 +14,13 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ContentControl}">
-                        
-                        <Grid Background="{StaticResource BgDarkGrayBrush}">
+                        <Grid x:Name="grid" Background="{StaticResource ListItemGrayBrush}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="12"/>
                             </Grid.ColumnDefinitions>
-
                             <TextBlock
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Center"
@@ -31,16 +29,30 @@
                                     FontFamily="{StaticResource Segoe UI}"
                                     Foreground="{StaticResource FontLightGrayBrush}"
                                     Text="{Binding NoteName}"/>
-
                             <Button Grid.Column="1" Style="{StaticResource NoteControlButton}"
-                                    Content="edit"> 
+                                    Content="edit">
                             </Button>
-
                             <Button Grid.Column="2" Style="{StaticResource NoteControlButton}"
-                                    Content="del">          
+                                    Content="del">
                             </Button>
-
                         </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation To="{StaticResource ListItemLightGray}" Duration="0:0:0.08" Storyboard.TargetName="grid" Storyboard.TargetProperty="(Grid.Background).(SolidColorBrush.Color)"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation To="{StaticResource ListItemGray}" Duration="0:0:0.08" Storyboard.TargetName="grid" Storyboard.TargetProperty="(Grid.Background).(SolidColorBrush.Color)"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
 
                     </ControlTemplate>
                 </Setter.Value>

@@ -20,4 +20,10 @@
     <Color x:Key="ScrollGray">#303541</Color>
     <SolidColorBrush x:Key="ScrollGrayBrush" Color="{StaticResource ScrollGray}" />
 
+    <Color x:Key="ListItemGray">#1f222a</Color>
+    <SolidColorBrush x:Key="ListItemGrayBrush" Color="{StaticResource ListItemGray}" />
+
+    <Color x:Key="ListItemLightGray">#303541</Color>
+    <SolidColorBrush x:Key="ListItemLightGrayBrush" Color="{StaticResource ListItemLightGray}" />
+
 </ResourceDictionary>
