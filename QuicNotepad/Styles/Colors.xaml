@@ -17,4 +17,7 @@
     <Color x:Key="WhiteOnHover">#22ffffff</Color>
     <SolidColorBrush x:Key="WhiteOnHoverBrush" Color="{StaticResource WhiteOnHover}"/>
 
+    <Color x:Key="ScrollGray">#303541</Color>
+    <SolidColorBrush x:Key="ScrollGrayBrush" Color="{StaticResource ScrollGray}" />
+
 </ResourceDictionary>

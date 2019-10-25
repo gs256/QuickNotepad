@@ -13,7 +13,7 @@
 
         <ScrollViewer 
             VerticalScrollBarVisibility="Visible" 
-            HorizontalScrollBarVisibility="Disabled"/>
+            HorizontalScrollBarVisibility="Disabled">
 
         <ItemsControl ItemsSource="{Binding Items}">
             <ItemsControl.ItemTemplate>
@@ -22,6 +22,8 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
+            
+        </ScrollViewer>
 
     </Grid>
     

@@ -27,3 +27,4 @@ D:\Coding\C#\QuicNotepad\QuicNotepad\obj\Debug\QuicNotepad.csproj.CopyComplete
 D:\Coding\C#\QuicNotepad\QuicNotepad\obj\Debug\QuicNotepad.exe
 D:\Coding\C#\QuicNotepad\QuicNotepad\obj\Debug\QuicNotepad.pdb
 D:\Coding\C#\QuicNotepad\QuicNotepad\obj\Debug\QuicNotepad.csprojAssemblyReference.cache
+D:\Coding\C#\QuicNotepad\QuicNotepad\obj\Debug\Styles\Scroll.baml

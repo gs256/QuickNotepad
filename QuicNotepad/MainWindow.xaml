@@ -67,7 +67,7 @@
 
                     <!-- Toggle side panel button -->
                     <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                        <Button Style="{StaticResource NavigationButton}" Content="&lt;" Command="{Binding ToggleSidebarCommand}"/>
+                        <Button Style="{StaticResource ToggleSidePanelButton}" Content="&lt;" Command="{Binding ToggleSidebarCommand}"/>
                         <StackPanel Background="{StaticResource BgGrayBrush}" Width="510" MouseDown="StackPanel_MouseDown"/>
                     </StackPanel>
 
