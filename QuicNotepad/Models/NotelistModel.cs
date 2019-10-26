@@ -6,5 +6,6 @@ namespace QuicNotepad
     {
         // A list which contains all notes
         public List<NoteModel> notes = new List<NoteModel>(); 
+
     }
 }

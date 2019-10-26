@@ -45,6 +45,7 @@ namespace QuicNotepad
             await Task.Delay((int)(seconds * 1000));
         }
 
+        #region No longer needed
         // Slides an element in from the right
         public static async Task SlideAndFadeInFromRightAsync(this FrameworkElement element, float seconds = 0.3f, bool keepMargin = true)
         {
@@ -134,5 +135,6 @@ namespace QuicNotepad
             // Wait for it to finish
             await Task.Delay((int)(seconds * 1000));
         }
+        #endregion
     }
 }

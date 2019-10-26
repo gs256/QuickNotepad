@@ -13,7 +13,8 @@
 
         <ScrollViewer 
             VerticalScrollBarVisibility="Visible" 
-            HorizontalScrollBarVisibility="Disabled">
+            HorizontalScrollBarVisibility="Disabled"
+            Padding="0 0 -10 0">
 
         <ItemsControl ItemsSource="{Binding Items}">
             <ItemsControl.ItemTemplate>

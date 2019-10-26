@@ -1,4 +1,6 @@
-﻿namespace QuicNotepad
+﻿using System;
+
+namespace QuicNotepad
 {
     public class NoteItemDVM : NoteItemViewModel
     {
@@ -8,7 +10,7 @@
         //
         public NoteItemDVM()
         {
-            NoteName = "ctor";
+            NoteName = "Note" + new Random().Next().ToString();
         }
 
     }

@@ -50,16 +50,12 @@ namespace QuicNotepad
 
         #endregion
 
-        #region Commands
 
         // Expand or collapse the side menu
         public RelayCommand ToggleSidebarCommand { get; private set; }
 
         private void ToggleSidebar() => SideMenuVisible = !SideMenuVisible;
 
-
-
-        #endregion
 
     }
 }

@@ -12,20 +12,21 @@
     <Style x:Key="NavigationButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
         <Setter Property="Height" Value="30"/>
         <Setter Property="Width" Value="46"/>
+        <Setter Property="FontSize" Value="14"/>
         <Setter Property="Background" Value="{StaticResource BgGrayBrush}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-
                     <Border 
                             x:Name="border"
                             Background="{TemplateBinding Background}" 
                             BorderThickness="0">
                         <ContentPresenter
                                 VerticalAlignment="Center"
-                                HorizontalAlignment="Center"/>
+                                HorizontalAlignment="Center"
+                                SnapsToDevicePixels="True"
+                                Margin="{TemplateBinding Padding}"/>
                     </Border>
-
                     <ControlTemplate.Triggers>
                         <EventTrigger RoutedEvent="MouseEnter">
                             <BeginStoryboard>
@@ -34,7 +35,6 @@
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
-
                         <EventTrigger RoutedEvent="MouseLeave">
                             <BeginStoryboard>
                                 <Storyboard>
@@ -42,7 +42,6 @@
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
-
                         <EventTrigger RoutedEvent="Button.Click">
                             <BeginStoryboard>
                                 <Storyboard>
@@ -52,7 +51,6 @@
                             </BeginStoryboard>
                         </EventTrigger>
                     </ControlTemplate.Triggers>
-
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -150,7 +148,7 @@
     <Style x:Key="NoteControlButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
         <Setter Property="Height" Value="30"/>
         <Setter Property="Width" Value="30"/>
-        <Setter Property="Margin" Value="4 0"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Template">
             <Setter.Value>

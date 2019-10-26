@@ -30,7 +30,7 @@
         <local:WindowViewModel/>
     </Window.DataContext>
 
-    <Border Padding="16">
+    <Border Padding="{Binding OuterMarginThickness}">
         <Border.Effect>
             <DropShadowEffect 
                 ShadowDepth="0"
@@ -48,9 +48,7 @@
             <local:SideMenuControl 
                 Width="240" 
                 local:AnimateSlideInFromLeftProperty.Value="{Binding SideMenuVisible}">
-                
                 <local:NoteListControl/>
-                
             </local:SideMenuControl>
 
 
@@ -73,9 +71,9 @@
 
                     <!-- Windows buttons -->
                     <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                        <Button Style="{StaticResource NavigationButton}" Content="-"/>
-                        <Button Style="{StaticResource NavigationButton}" Content="?"/>
-                        <Button Style="{StaticResource NavigationButton}" Content="X"/>
+                        <Button Style="{StaticResource NavigationButton}" Content="–" Padding="0 0 0 3"/>
+                        <Button Style="{StaticResource NavigationButton}" Content="☐"/>
+                        <Button Style="{StaticResource NavigationButton}" Content="✕"/>
                     </StackPanel>
                 </Grid>
 
@@ -83,7 +81,8 @@
                 <TextBox 
                     Grid.Row="1"
                     Background="{StaticResource BgGrayBrush}"
-                    Margin="6"
+                    Margin="0"
+                    Padding="6"
                     TextWrapping="Wrap"
                     FontFamily="{StaticResource Segoe UI}"
                     FontSize="{StaticResource FontSizeNormal}"

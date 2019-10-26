@@ -59,10 +59,10 @@ namespace QuicNotepad
         {
             if (value)
                 // Animate in
-                await element.SlideAndFadeInFromLeftAsync(FirstLoad ? 0 : 0.3f, keepMargin: false);
+                await element.SlideInFromRightAsync(FirstLoad ? 0 : 0.3f, keepMargin: false);
             else
                 // Animate out
-                await element.SlideAndFadeOutToLeftAsync(FirstLoad ? 0 : 0.3f, keepMargin: false);
+                await element.SlideOutToRightAsync(FirstLoad ? 0 : 0.3f, keepMargin: false);
         }
     }
 }
